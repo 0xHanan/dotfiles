@@ -1,0 +1,36 @@
+# Font configuration
+font:
+  # Normal (roman) font face
+  normal:
+    # family: "Cascadia Code PL"
+    # family: "Hack Nerd Font"
+    family: "SauceCodePro Nerd Font"
+    style: Medium
+
+  # Bold font face
+  bold:
+    family: "SauceCodePro Nerd Font"
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: "SauceCodePro Nerd Font"
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "SauceCodePro Nerd Font"
+    style: Bold Italic
+
+  # Point size
+  size: 13.4
+
+  # Offset
+  #offset:
+  #  x: 0
+  #  y: 0
+
+  # Glyph offset
+  #glyph_offset:
+  #  x: 0
+  #  y: 0
