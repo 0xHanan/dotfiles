@@ -21,3 +21,7 @@ mapper("n",'K', ':lua vim.lsp.buf.hover()<cr>')
 mapper("n",'<c-k>', ':lua vim.lsp.buf.signature_help()<cr>')
 mapper("n",'<leader>af', ':lua vim.lsp.buf.code_action()<cr>')
 mapper("n",'<leader>rn', ':lua vim.lsp.buf.rename()<cr>')
+
+-- bufferline.nvim
+mapper("n", '<leader>b', ':BufferLinePick<CR>')
+mapper("n", '<leader>d', ':BufferLinePickClose<CR>')
