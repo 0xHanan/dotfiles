@@ -1,6 +1,12 @@
 local cmp = require'cmp'
 
 cmp.setup({
+  snippet = {
+    -- REQUIRED - you must specify a snippet engine
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+    end,
+  },
   mapping = {
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
@@ -14,6 +20,7 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'vsnip' }, -- For vsnip users.
   }, {
       { name = 'buffer' },
     })
@@ -35,7 +42,7 @@ cmp.setup.cmdline(':', {
     })
 })
 
--- -- Setup lspconfig.
+-- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local lsp_installer = require("nvim-lsp-installer")
