@@ -105,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/wg/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/home/wg/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/wg/.local/share/nvim/site/pack/packer/start/gruvbox",

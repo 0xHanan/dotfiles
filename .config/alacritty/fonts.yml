@@ -23,7 +23,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.4
+  size: 14.0 
 
   # Offset
   #offset:

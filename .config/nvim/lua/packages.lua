@@ -26,6 +26,12 @@ require('packer').startup(function()
     end
   }
 
+  -- golang
+  use 'ray-x/go.nvim'
+
 end)
 
 require('bufferline').setup()
+require('go').setup()
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt() ]], false)
+-- autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
