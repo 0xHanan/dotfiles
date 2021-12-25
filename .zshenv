@@ -1,14 +1,4 @@
-typeset -U PATH path
-typeset -gU GOPATH
+typeset -gU ZDOTDIR
 
-GOPATH=(
-  "$HOME/go"
-)
-
-path=(
-  "$HOME/.local/bin"
-  "$GOPATH/bin"
-  "$path[@]")
-
-export PATH
-export GOPATH
+ZDOTDIR="$HOME/.config/zsh"
+. $ZDOTDIR/.zshenv
