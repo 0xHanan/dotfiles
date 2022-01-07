@@ -8,4 +8,5 @@ set cursorline
 set hlsearch
 colorscheme gruvbox
 set clipboard+=unnamedplus
+set relativenumber
 ]])

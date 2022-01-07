@@ -2,6 +2,8 @@
 require('packer').startup({function()
   use 'wbthomason/packer.nvim'
   use 'gruvbox-community/gruvbox'
+  use 'windwp/nvim-autopairs' -- TODO: go over configurations with nvim-cmp
+
   -- tpope
   use "tpope/vim-surround"
   use "tpope/vim-fugitive"
@@ -15,9 +17,15 @@ require('packer').startup({function()
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use {
     'williamboman/nvim-lsp-installer',
+    config = function ()
+      require "myconf/lsp"
+    end
     }
 
   use 'simrat39/rust-tools.nvim'
+  use {
+  "ray-x/lsp_signature.nvim",
+  }
 
   -- Autocompletion plugin
   use {
@@ -41,10 +49,18 @@ require('packer').startup({function()
       require('myconf/treesitter')
     end
   }
+
+  -- spellcheck
+  use {
+  'lewis6991/spellsitter.nvim',
+  config = function()
+    require('spellsitter').setup()
+  end
+}
   use {
     'numToStr/Comment.nvim',
     config = function()
-      require('Comment').setup()
+      require "myconf/comments"
     end
   }
 
