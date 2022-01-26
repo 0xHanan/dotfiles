@@ -22,13 +22,11 @@ window:
   decorations: full
   startup_mode: Windowed
   dynamic_title: true
+  opacity: 1.0
 
 ## scrolling
   history: 10000
   multiplier: 3
-
-## Background opacity
-background_opacity: 1.0
 
 ## Cursor
 cursor:
